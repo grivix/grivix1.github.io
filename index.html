@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grivix | Next-Gen Charging Solutions</title>
+    <style>
+        /* --- Modern & Minimalist Style Rules --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #0b0f19; /* Deep tech dark background */
+            color: #f3f4f6;
+            line-height: 1.6;
+        }
+
+        /* Header Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: rgba(11, 15, 25, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            color: #00ffcc; /* Vibrant, technical accent color */
+        }
+
+        .nav-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00ffcc;
+        }
+
+        /* Main Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 140px 5% 60px 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+            background: linear-gradient(to right, #ffffff, #9ca3af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #9ca3af;
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        /* --- THE AUTOMATIC IMAGE SLIDER --- */
+        .slider-container {
+            width: 100%;
+            max-width: 450px; /* Perfect sizing for product presentation */
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            background: #111827;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            margin-bottom: 40px;
+        }
+
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .slide {
+            width: 100%;
+            flex-shrink: 0;
+            display: block;
+            object-fit: cover;
+            aspect-ratio: 1 / 1; /* Keeps images perfectly square */
+        }
+
+        /* High Impact Call-to-Action Button */
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            background-color: #00ffcc;
+            color: #0b0f19;
+            text-decoration: none;
+            padding: 16px 32px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 10px 20px rgba(0, 255, 204, 0.2);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 25px rgba(0, 255, 204, 0.4);
+        }
+
+        /* Product Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            width: 100%;
+            max-width: 1000px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            background: #111827;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: left;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: border 0.3s;
+        }
+
+        .feature-card:hover {
+            border: 1px solid rgba(0, 255, 204, 0.3);
+        }
+
+        .feature-card h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-card h3::before {
+            content: "✓";
+            color: #00ffcc;
+            font-weight: bold;
+        }
+
+        .feature-card p {
+            color: #9ca3af;
+            font-size: 14px;
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #4b5563;
+            font-size: 13px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 80px;
+        }
+
+        /* Smooth adjustments for smaller mobile screens */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">GRIVIX</div>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="https://wa.me/919993459309" target="_blank">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Next-Gen Power. Delivered.</h1>
+        <p>Experience ultra-fast, intelligent charging built for your heavy-duty daily routine. Engineered to be compact, safe, and resilient.</p>
+
+        <div class="slider-container">
+            <div class="slider-wrapper">
+                <img src="charger1.jpg" class="slide" alt="Grivix Charger Main View">
+                <img src="charger2.jpg" class="slide" alt="Grivix Charger Angle View">
+                <img src="charger3.jpg" class="slide" alt="Grivix Charger Box Packaging">
+            </div>
+        </div>
+
+        <a href="https://wa.me/919993459309?text=Hi%20Grivix,%20I%20am%20interested%20in%20your%20charger." class="btn-whatsapp" target="_blank">
+            Order via WhatsApp
+        </a>
+
+        <div class="features-grid" id="features">
+            <div class="feature-card">
+                <h3>Intelligent Fast Charging</h3>
+                <p>Engineered with cutting-edge protocols to deliver the maximum optimal speed safely to your specific devices.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Multi-Layer Protection</h3>
+                <p>Built-in safeguards protect your expensive electronics against over-current, overheating, and short circuits.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Premium Compact Build</h3>
+                <p>A minimalist, highly durable structure designed to fit perfectly into your travel kit or wall socket without clutter.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Grivix. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const wrapper = document.querySelector('.slider-wrapper');
+        const slides = document.querySelectorAll('.slide');
+        
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+
+        function nextSlide() {
+            currentIndex++;
+            if (currentIndex >= totalSlides) {
+                currentIndex = 0;
+            }
+            wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        // Shifts automatically every 3.5 seconds
+        setInterval(nextSlide, 3500);
+    </script>
+
+</body>
+</html>
